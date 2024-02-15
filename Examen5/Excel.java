@@ -90,12 +90,12 @@ public class Excel extends JFrame {
         guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Calcular el total de prendas
+                
                 int totalPrendas = 0;
                 for (int i = 0; i < puntosTableModel.getRowCount(); i++) {
                     int numPrendas = Integer.parseInt(puntosTableModel.getValueAt(i, 3).toString());
                     totalPrendas += numPrendas;
-                    puntosTableModel.setValueAt(numPrendas, i, 5); // Actualizar la columna "Total de prendas" en la fila actual
+                    puntosTableModel.setValueAt(numPrendas, i, 5); 
                 }
                 totalPrendasField.setText(String.valueOf(totalPrendas));
             }
@@ -118,5 +118,5 @@ public class Excel extends JFrame {
                 frame.setVisible(true);
             }
         });
-    }
+    }//Examen
 }
